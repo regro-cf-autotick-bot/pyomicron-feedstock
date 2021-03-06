@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   entry_points:
     - omicron-hdf5-merge = omicron.cli.hdf5_merge:main
@@ -31,13 +31,13 @@ requirements:
     - gwdatafind
     - gwpy >=1.0.0
     - h5py
-    - htcondor
     - ligo-segments
     - lscsoft-glue >=1.60.0
     - markuppy
     - numpy
     - omicron >=2.3.12
     - pycondor
+    - python-htcondor
     - python-ldas-tools-framecpp
     - python-ligo-lw >=1.4.0
     - root_base
