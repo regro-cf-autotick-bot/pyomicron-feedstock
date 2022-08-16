@@ -1,5 +1,5 @@
 {% set name = "pyomicron" %}
-{% set version = "1.1.0" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f13c7d758ce2ec75acf9940d9fba4590807e0cbe96fc997f5b21b1b30eacac17
+  sha256: 76f4c68005a1683c7e13b35c8c9d9d9db1a8106a12ce63fe75d45a2e59560cd8
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - omicron-hdf5-merge = omicron.cli.hdf5_merge:main
