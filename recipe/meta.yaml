@@ -77,7 +77,6 @@ test:
 about:
   home: https://github.com/gwpy/pyomicron
   dev_url: https://github.com/gwpy/pyomicron.git
-  documentation: https://pyomicron.readthedocs.io
   license: GPL-3.0-or-later
   license_family: GPL
   license_file: LICENSE
@@ -86,7 +85,8 @@ about:
     This package provides a set of python utilities for gravitational-wave
     detector characterisation and data quality. It is intended for use by
     the International Gravitational Wave Network (IGWN) of ground-based
-    detectors, along with the Omicron (C++) package.
+    detectors, along with the Omicron (C++) package. Documentation is
+    available at https://pyomicron.readthedocs.io
 
 extra:
   recipe-maintainers:
