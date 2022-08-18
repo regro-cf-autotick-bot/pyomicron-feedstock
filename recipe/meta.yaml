@@ -1,5 +1,5 @@
 {% set name = "pyomicron" %}
-{% set version = "2.0.2" %}
+{% set version = "2.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d953e693732705b46a16336b1d092b353bbd081720ffcc8ee376ad193f9d3f40
+  sha256: 44793864ea312dadc7faa873cd8b291e1a35e5f0593e409a66563b79293c0642
 
 build:
   noarch: python
@@ -19,6 +19,8 @@ build:
     - omicron-process = omicron.cli.process:main
     - omicron-root-merge = omicron.cli.root_merge:main
     - omicron-status = omicron.cli.status:main
+    - omicron-archive = omicron.cli.archive:main
+    - omicron-merge-with-gaps = omicron.cli.merge_with_gaps:main
 
 requirements:
   host:
@@ -71,12 +73,11 @@ test:
     - omicron-status --help
     - omicron-archive --help
     - omicron-merge-with-gaps --help
-    - omicron-metric-day-merge --help
 
 about:
   home: https://github.com/gwpy/pyomicron
   dev_url: https://github.com/gwpy/pyomicron.git
-  documentation: https://pyomicron.readthedocs.ip
+  documentation: https://pyomicron.readthedocs.io
   license: GPL-3.0-or-later
   license_family: GPL
   license_file: LICENSE
