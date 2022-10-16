@@ -11,6 +11,8 @@ Summary: Python utilities and extensions for the Omicron (C++) GW event trigger 
 
 Development: https://github.com/gwpy/pyomicron.git
 
+Documentation: https://pyomicron.readthedocs.io
+
 This package provides a set of python utilities for gravitational-wave
 detector characterisation and data quality. It is intended for use by
 the International Gravitational Wave Network (IGWN) of ground-based
