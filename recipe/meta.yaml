@@ -32,6 +32,7 @@ requirements:
     - gwdatafind
     - gwpy >=2.0.0
     - h5py
+    - igwn-auth-utils >=0.3.0
     - ligo-segments
     - lscsoft-glue >=1.60.0
     - markuppy
@@ -63,6 +64,7 @@ test:
   commands:
     # check dependencies
     - python -m pip check
+    - python -m pip show pyomicron
     # run unit tests
     - python -m pytest -ra --pyargs omicron
     # check that scripts were built
