@@ -1,11 +1,11 @@
-About pyomicron
-===============
+About pyomicron-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyomicron-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/gwpy/pyomicron
 
 Package license: GPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyomicron-feedstock/blob/main/LICENSE.txt)
 
 Summary: Python utilities and extensions for the Omicron (C++) GW event trigger generator
 
@@ -153,7 +153,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@alurban](https://github.com/alurban/)
 * [@areeda](https://github.com/areeda/)
 * [@duncanmmacleod](https://github.com/duncanmmacleod/)
 * [@eagoetz](https://github.com/eagoetz/)

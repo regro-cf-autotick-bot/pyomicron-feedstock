@@ -1,5 +1,5 @@
 {% set name = "pyomicron" %}
-{% set version = "2.0.4" %}
+{% set version = "2.0.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 917219fc3b0db5d30469b41af9e87efe4043c81020f8805422eb45f2d7b39861
+  sha256: 899e35e49be509a725adcd81064fc2473994a0e72d0527801ad8b2b2823e5331
 
 build:
   noarch: python
@@ -32,6 +32,7 @@ requirements:
     - gwdatafind
     - gwpy >=2.0.0
     - h5py
+    - igwn-auth-utils >=0.3.0
     - ligo-segments
     - lscsoft-glue >=1.60.0
     - markuppy
@@ -63,6 +64,7 @@ test:
   commands:
     # check dependencies
     - python -m pip check
+    - python -m pip show pyomicron
     # run unit tests
     - python -m pytest -ra --pyargs omicron
     # check that scripts were built
@@ -90,7 +92,6 @@ about:
 
 extra:
   recipe-maintainers:
-    - alurban
     - areeda
     - duncanmmacleod
     - eagoetz
