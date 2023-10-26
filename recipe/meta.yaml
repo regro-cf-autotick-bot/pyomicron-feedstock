@@ -1,5 +1,5 @@
 {% set name = "pyomicron" %}
-{% set version = "2.0.5" %}
+{% set version = "2.0.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 899e35e49be509a725adcd81064fc2473994a0e72d0527801ad8b2b2823e5331
+  sha256: b92c6875d30a85a53c6eb4025683437188a412299c18b0e7aa7da9658d504f44
 
 build:
   noarch: python
@@ -28,7 +28,7 @@ requirements:
     - python >=3.9
     - setuptools
   run:
-    - dqsegdb2
+    - dqsegdb2 >=1.2.0
     - gwdatafind
     - gwpy >=2.0.0
     - h5py
@@ -48,7 +48,7 @@ requirements:
 test:
   requires:
     - pip
-    - pytest
+    - pytest >=3.9.1
   imports:
     - omicron
     - omicron.cli
