@@ -1,5 +1,5 @@
 {% set name = "pyomicron" %}
-{% set version = "2.0.8" %}
+{% set version = "2.0.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 27ae6b981dae8c9940774daa01a046c7eeae5aacfb01964bbde875ba3656ba67
+  sha256: bd5fbf8d96a37d2f41825ee4f176ef9f1536dd3c76e761df801b8302df466e76
 
 build:
   noarch: python
