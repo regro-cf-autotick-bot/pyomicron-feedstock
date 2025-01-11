@@ -6,12 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 27ae6b981dae8c9940774daa01a046c7eeae5aacfb01964bbde875ba3656ba67
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - omicron-hdf5-merge = omicron.cli.hdf5_merge:main
@@ -25,7 +25,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools
   run:
     - dqsegdb2 >=1.2.0
@@ -39,7 +39,7 @@ requirements:
     - numpy
     - omicron >=2.3.12
     - pycondor
-    - python >=3.9
+    - python >={{ python_min }}
     - python-htcondor
     - python-ldas-tools-framecpp
     - python-ligo-lw >=1.4.0
@@ -49,6 +49,7 @@ test:
   requires:
     - pip
     - pytest >=3.9.1
+    - python {{ python_min }}
   imports:
     - omicron
     - omicron.cli
